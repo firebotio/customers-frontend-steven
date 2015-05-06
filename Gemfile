@@ -2,8 +2,8 @@ source "https://rubygems.org"
 
 gem "rails", "4.2.0"
 gem "dotenv-rails"
+gem "pg"
 gem "puma"
-gem "sqlite3"
 
 # Frontend
 gem "bourbon"
