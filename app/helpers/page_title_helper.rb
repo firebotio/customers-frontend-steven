@@ -4,7 +4,7 @@ module PageTitleHelper
     if content_for? page_title_symbol
       content_for page_title_symbol
     else
-      "Firebot"
+      "Text"
     end
   end
 end

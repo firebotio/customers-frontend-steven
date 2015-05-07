@@ -1,0 +1,5 @@
+= content_for :header do
+  %span
+
+- %w(hero).each do |w|
+  = render "home/index/#{w}"
