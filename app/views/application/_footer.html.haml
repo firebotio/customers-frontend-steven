@@ -2,3 +2,8 @@
   = yield :footer
 - else
   %footer
+    .footer
+      .footer__copyright
+        %p
+          Text &#169;
+          = Time.zone.now.strftime "%Y"
