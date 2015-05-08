@@ -1,0 +1,13 @@
+%section.start
+  .background
+  .tint
+  .rows
+    .row
+      %h2
+        Get started and join now
+    .row
+      .column
+        %fieldset
+          = text_field_tag :email, "", autocomplete: "off",
+            placeholder: "Please enter your email address"
+          = button_tag "Sign up"
