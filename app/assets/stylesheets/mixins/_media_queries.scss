@@ -30,7 +30,7 @@
 }
 
 @mixin screen-except-lg {
-  @include media(max-width: $min-width-large) {
+  @include media(max-width $min-width-large) {
     @content;
   }
 }
