@@ -24,10 +24,8 @@
   .row {
     @include outer-container;
     padding: 0 $spacing;
-    h2 {
+    h2, p {
       color: $white;
-      font-weight: $font-weight-medium;
-      text-align: center;
     }
     .column {
       @include span-columns(12);

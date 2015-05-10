@@ -2,13 +2,16 @@
   .background
   .tint
   .rows
-    .row
+    .row.row-header
       %h2
+        Sign up
+      %p
         Get started and join now
+      .underline
     .row
       .column
         %fieldset
-          = form_tag "#" do
+          = form_tag home_email_path do
             = text_field_tag :name, "", autocomplete: "off",
               placeholder: "The name of your business"
             = text_field_tag :email, "", autocomplete: "off",

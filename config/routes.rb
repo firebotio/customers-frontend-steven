@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   # Additional routes under hear
   #-----------------------------------------------------------------------------
+  post "home/email" => "home#email", as: :home_email
 end

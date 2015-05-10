@@ -6,10 +6,6 @@
   }
   .row {
     @include outer-container;
-    h2 {
-      font-weight: $font-weight-medium;
-      text-align: center;
-    }
     .column {
       @include screen-xs {
         @include span-columns(12);
