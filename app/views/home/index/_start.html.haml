@@ -8,6 +8,10 @@
     .row
       .column
         %fieldset
-          = text_field_tag :email, "", autocomplete: "off",
-            placeholder: "Please enter your email address"
-          = button_tag "Sign up"
+          = form_tag "#" do
+            = text_field_tag :name, "", autocomplete: "off",
+              placeholder: "The name of your business"
+            = text_field_tag :email, "", autocomplete: "off",
+              placeholder: "Please enter your email address",
+              type: "email"
+            = button_tag "Sign up"
