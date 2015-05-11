@@ -5,9 +5,9 @@ html, body {
 }
 
 body {
+  @include didact-gothic;
   -webkit-font-smoothing: antialiased;
   background-color: $background-color;
-  font-family: $font-family;
   font-weight: $font-weight-normal;
   overflow-x: hidden;
   .wrapper {

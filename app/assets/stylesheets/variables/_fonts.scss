@@ -13,3 +13,12 @@ $font-weight-normal: 300;
 $font-weight-medium: 400;
 
 $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font-face {
+  font-family: "Didact Gothic";
+  src: font-url("didact-gothic/DidactGothic.ttf") format("truetype");
+}
+
+@mixin didact-gothic {
+  font-family: "Didact Gothic", $font-family;
+}
