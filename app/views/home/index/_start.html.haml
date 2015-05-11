@@ -10,7 +10,10 @@
       .underline
     .row
       .column
-        %fieldset
+        %fieldset.show
+          %p
+            Thank you for signing up, we will contact you very shortly
+        %fieldset.hide
           = form_tag home_email_path do
             = text_field_tag :name, "", autocomplete: "off",
               placeholder: "The name of your business"

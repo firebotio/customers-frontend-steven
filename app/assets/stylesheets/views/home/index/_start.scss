@@ -34,6 +34,9 @@
         border: none;
         margin: $spacing * 2 0 0 0;
         padding: 0;
+        &.show {
+          display: none;
+        }
         input {
           @include border-radius;
           background-color: transparent;

@@ -1,8 +1,9 @@
 //= require jquery
-//= require modulejs
+
+//= require react
+//= require react_ujs
+//= require components
+
+//= require js-routes
 
 //= require_tree .
-
-// modulejs.require('flash_message').initialize();
-// modulejs.require('hero_content').initialize();
-modulejs.require('button_scroll_to').initialize();
