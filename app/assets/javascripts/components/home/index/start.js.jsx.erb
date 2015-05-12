@@ -43,10 +43,10 @@ var HomeIndexStart = React.createClass({
 
   _submit: function() {
     var data = {
-      from: 'tommydangerouss@gmail.com',
+      from: "<%= ENV['HOME_EMAIL_TO'] %>",
       subject: 'Business Sign Up',
       text: 'Name: ' + this.state.name + '\nEmail: ' + this.state.email,
-      to: 'tommydangerouss@gmail.com'
+      to: "<%= ENV['HOME_EMAIL_TO'] %>"
     };
     FirebotService.email(data, function(response) {
       console.log(response);
