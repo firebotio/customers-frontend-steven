@@ -8,16 +8,4 @@
       %p
         Get started and join now
       .underline
-    .row
-      .column
-        %fieldset.show
-          %p
-            Thank you for signing up, we will contact you very shortly
-        %fieldset.hide
-          = form_tag home_email_path do
-            = text_field_tag :name, "", autocomplete: "off",
-              placeholder: "The name of your business"
-            = text_field_tag :email, "", autocomplete: "off",
-              placeholder: "Please enter your email address",
-              type: "email"
-            = button_tag "Sign up"
+    = react_component "HomeIndexStart", {}, { class: "row" }

@@ -50,6 +50,7 @@
             text-align: center;
           }
           @include screen-lg {
+            margin-right: $spacing * 0.25;
             max-width: $spacing * 20;
           }
           &:focus {
@@ -78,9 +79,6 @@
           @include screen-except-lg {
             margin-top: $spacing * 0.5;
             width: 100%;
-          }
-          @include screen-lg {
-            margin-left: $spacing * 0.25;
           }
           &:hover {
             background-color: $blue-hover;

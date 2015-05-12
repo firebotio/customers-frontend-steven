@@ -1,17 +1,58 @@
-$(document).ready(function() {
-  $(document).on('submit', '.home-index .start form', function() {
-    var form = $(this);
-    $.ajax({
-      data:   form.serialize(),
-      method: form.attr('method'),
-      url:    form.attr('action'),
-      success: function(response) {
-        var hide = form.closest('.hide');
-        var show = hide.siblings('.show');
-        hide.remove();
-        show.show();
-      }
+var HomeIndexStart = React.createClass({
+  getInitialState: function() {
+    return {
+      email: '',
+      name: ''
+    };
+  },
+
+  render: function() {
+    return (
+      <div className='column'>
+        <fieldset className='show' ref='thankYou'>
+          <p>Thank you for signing up, we will contact you very shortly</p>
+        </fieldset>
+        <fieldset className='hide' ref='inputFields'>
+          <form action='#' method='post' onSubmit={this._submit}>
+            <input autoComplete='off'
+                   onChange={this._onChange}
+                   name='name'
+                   placeholder='The name of your business'
+                   type='text'
+                   value={this.state.name} />
+            <input autoComplete='off'
+                   onChange={this._onChange}
+                   name='email'
+                   placeholder='Please enter your email address'
+                   type='email'
+                   value={this.state.email} />
+            <button>Sign up</button>
+          </form>
+        </fieldset>
+      </div>
+    );
+  },
+
+  _onChange: function(event) {
+    var value  = event.target.value;
+    var name   = $(event.target).attr('name');
+    var hash   = {}
+    hash[name] = value;
+    this.setState(hash);
+  },
+
+  _submit: function() {
+    var data = {
+      from: 'tommydangerouss@gmail.com',
+      subject: 'Business Sign Up',
+      text: 'Name: ' + this.state.name + '\nEmail: ' + this.state.email,
+      to: 'tommydangerouss@gmail.com'
+    };
+    FirebotService.email(data, function(response) {
+      console.log(response);
     });
-    return false;
-  });
+    $(React.findDOMNode(this.refs.thankYou)).show();
+    $(React.findDOMNode(this.refs.inputFields)).remove();
+    event.preventDefault();
+  }
 });

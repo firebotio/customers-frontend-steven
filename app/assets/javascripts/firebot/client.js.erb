@@ -1,0 +1,10 @@
+var Client = function() {
+  this.apiUrl     = "<%= ENV['FIREBOT_API_URL'] %>";
+  this.apiVersion = "<%= ENV['FIREBOT_API_VERSION'] %>";
+  this.headers = {
+    'X-Firebot-Application-Key': "<%= ENV['FIREBOT_APPLICATION_KEY'] %>",
+    'X-Firebot-Application-Id': "<%= ENV['FIREBOT_APPLICATION_ID'] %>"
+  };
+}
+
+window.FirebotClient = new Client();

@@ -7,3 +7,5 @@
 //= require js-routes
 
 //= require_tree .
+
+var hash = CryptoJS.SHA1("Message");
