@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   # Additional routes under hear
   #-----------------------------------------------------------------------------
+  get "sign-up" => "organizations#new"
 end
